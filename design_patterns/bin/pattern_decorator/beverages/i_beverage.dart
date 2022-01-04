@@ -1,8 +1,4 @@
-enum BeverageSize {
-  tall,
-  grande,
-  venti,
-}
+import 'beverage_size.dart';
 
 abstract class IBeverage {
   var description = 'no description';

@@ -4,6 +4,10 @@ import 'notifier/weather_notifier.dart';
 void main() {
   final publisher = WeatherNotifier();
   final watch = WatchDisplay(weatherPublisher: publisher);
-  publisher.setMeasurements(40, 50, 60);
-  publisher.removeObserver(watch);
+  const temperature = 40.0;
+  const humidity = 50.0;
+  const pressure = 60.0;
+  publisher
+    ..setMeasurements(temperature, humidity, pressure)
+    ..removeObserver(watch);
 }

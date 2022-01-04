@@ -10,7 +10,7 @@ class WeatherNotifier implements IWeatherNotifier {
 
   @override
   void notifyObservers() {
-    for (var observer in _observers) {
+    for (final observer in _observers) {
       observer.update(_temperature, _humidity, _pressure);
     }
   }

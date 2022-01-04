@@ -6,7 +6,7 @@ import 'store/burger_king_pizza_store.dart';
 
 void main() {
   final pizzaFactory = NewYorkPizzaFactory();
-  final pizzaStore = BurgerKingPizzaStore(pizzaFactory);
-  pizzaStore.orderPizza('pepperoni');
-  
+  final pizzaStore = BurgerKingPizzaStore(pizzaFactory)
+    ..orderPizza('pepperoni');
+  print(pizzaStore);
 }

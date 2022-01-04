@@ -1,17 +1,20 @@
 import '../weapon/i_weapon.dart';
 
 class Character {
-  IWeapon weapon;
+  late IWeapon _weapon;
 
-  Character({
-    required this.weapon,
-  });
+  Character({required IWeapon weapon}) {
+    _weapon = weapon;
+  }
 
   void fight() {
-    weapon.useWeapon();
+    _weapon.useWeapon();
   }
 
   void setWeapon(IWeapon weapon) {
-    this.weapon = weapon;
+    _weapon = weapon;
   }
+
+  @override
+  String toString() => 'Character(_weapon: $_weapon)';
 }

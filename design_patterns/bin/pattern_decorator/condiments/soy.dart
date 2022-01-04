@@ -1,3 +1,4 @@
+import '../beverages/beverage_size.dart';
 import '../beverages/i_beverage.dart';
 import 'i_condiment_decorator.dart';
 
@@ -5,7 +6,7 @@ class Soy extends ICondimentDecorator {
   final IBeverage _beverage;
 
   Soy(this._beverage) {
-    description = _beverage.description + ', Soy';
+    description = '${_beverage.description}, Soy';
     size = _beverage.size;
   }
 
@@ -23,11 +24,14 @@ class Soy extends ICondimentDecorator {
   double _getBeverageSizeCost() {
     switch (size) {
       case BeverageSize.tall:
-        return 0.1;
+        const tailCost = 0.1;
+        return tailCost;
       case BeverageSize.grande:
-        return 0.5;
+        const grandeCost = 0.5;
+        return grandeCost;
       case BeverageSize.venti:
-        return 0.9;
+        const ventiCost = 0.9;
+        return ventiCost;
     }
   }
 }

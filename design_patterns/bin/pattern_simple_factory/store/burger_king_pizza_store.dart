@@ -13,4 +13,7 @@ class BurgerKingPizzaStore implements IPizzaStore {
 
     return pizza;
   }
+
+  @override
+  String toString() => 'BurgerKingPizzaStore(pizzaFactory: $pizzaFactory)';
 }

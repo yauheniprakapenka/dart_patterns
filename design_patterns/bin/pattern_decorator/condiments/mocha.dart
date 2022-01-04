@@ -5,7 +5,7 @@ class Mocha extends ICondimentDecorator {
   final IBeverage _beverage;
 
   Mocha(this._beverage) {
-    description = _beverage.description + ', Mocha';
+    description = '${_beverage.description}, Mocha';
     size = _beverage.size;
   }
 

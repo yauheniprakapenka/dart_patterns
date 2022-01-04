@@ -7,6 +7,7 @@ class Espresso extends IBeverage {
 
   @override
   double getCost() {
-    return 1.99;
+    const espressoCost = 1.99;
+    return espressoCost;
   }
 }

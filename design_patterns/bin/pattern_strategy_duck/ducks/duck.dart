@@ -29,4 +29,8 @@ class Duck {
   void setFlyBehavior(IFlyBehavior fb) {
     flyBehavior = fb;
   }
+
+  @override
+  String toString() =>
+      'Duck(quackBehavior: $quackBehavior, flyBehavior: $flyBehavior)';
 }

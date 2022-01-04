@@ -14,8 +14,9 @@ class NewYorkPizzaFactory implements IPizzaFactory {
       pizza = PepperoniPizza();
     }
 
-    pizza.prepare();
-    pizza.box();
+    pizza
+      ..prepare()
+      ..box();
 
     return pizza;
   }

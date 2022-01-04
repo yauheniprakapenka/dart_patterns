@@ -1,11 +1,11 @@
 import '../notifier/i_weather_notifier.dart';
-import 'i_display.dart';
 import '../observer/i_observer.dart';
+import 'i_display.dart';
 
 class WatchDisplay implements IObserver, IDisplay {
-  var _temperature = .0;
-  var _humidity = .0;
-  var _pressure = .0;
+  var _temperature = 0.0;
+  var _humidity = 0.0;
+  var _pressure = 0.0;
   late final IWeatherNotifier _weatherPublisher;
 
   WatchDisplay({required IWeatherNotifier weatherPublisher}) {
@@ -23,7 +23,11 @@ class WatchDisplay implements IObserver, IDisplay {
 
   @override
   void display() {
-    print(
-        'WatchDisplay Отображены данные: temperature: $_temperature humidity: $_humidity _pressure: $_pressure');
+    final text = StringBuffer()
+      ..write('TvDispay Отображены данные: ')
+      ..write('temperature: $_temperature ')
+      ..write('humidity: $_humidity ')
+      ..write('pressure: $_pressure');
+    print(text.toString());
   }
 }
